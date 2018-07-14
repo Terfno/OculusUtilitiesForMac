@@ -2873,29 +2873,31 @@ internal static class OVRPlugin
 	{
 		frustum = default(Frustumf2);
 
-		if (version >= OVRP_1_15_0.version)
-		{
-			Result result = OVRP_1_15_0.ovrp_GetNodeFrustum2(nodeId, out frustum);
-			if (result != Result.Success)
+		#if !OVRPLUGIN_UNSUPPORTED_PLATFORM
+			if(version >= OVRP_1_15_0.version)
+			{
+				Result result = OVRP_1_15_0.ovrp_GetNodeFrustum2(nodeId, out frustum);
+				if(result != Result.Success)
+				{
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+			}
+			else 
+		#endif
 			{
 				return false;
 			}
-			else
-			{
-				return true;
-			}
-		}
-		else
-		{
-			return false;
-		}
-
 	}
 
 	public static bool AsymmetricFovEnabled
 	{
 		get
 		{
+		#if !OVRPLUGIN_UNSUPPORTED_PLATFORM
 			if (version >= OVRP_1_21_0.version)
 			{
 				Bool asymmetricFovEnabled = Bool.False;
@@ -2911,6 +2913,7 @@ internal static class OVRPlugin
 				}
 			}
 			else
+		#endif
 			{
 				return false;
 			}
@@ -2921,6 +2924,7 @@ internal static class OVRPlugin
 	{
 		get
 		{
+		#if !OVRPLUGIN_UNSUPPORTED_PLATFORM
 			if (version >= OVRP_1_15_0.version)
 			{
 				Bool enabled = Bool.False;
@@ -2928,6 +2932,7 @@ internal static class OVRPlugin
 				return enabled == Bool.True;
 			}
 			else
+		#endif
 			{
 				return false;
 			}
