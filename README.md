@@ -2,7 +2,9 @@
 Terfnoが頑張ったOculusUtilitiesを公開するだけのリポジトリ
 ## Unity project
 Afterのフォルダはエラー解消後です。
+
 Beforeのフォルダはエラー解消前です。
+
 ---
 
 # macOSでUnity使ってOculusGOの開発を初めてやったときに情弱がハマったとこ
@@ -160,10 +162,16 @@ Unity→Build Settings→Player Settings→Other Settings
 
 この場所にMinimum API Levelっていう設定項目と，Target API Levelっていう設定項目があると思います。
 
+![画像](https://github.com/Terfno/OculusUtilitiesForMac/blob/master/image/スクリーンショット%202018-07-14%2018.27.49.png)
+
 これねエラーが出るときの設定は以下の状態でした。
-![画像]()
+
+![画像](https://github.com/Terfno/OculusUtilitiesForMac/blob/master/image/スクリーンショット%202018-07-14%2018.28.52.png)
+
 エラー出るときの設定状態エラーを解消する設定はこんな感じになりました。
-![画像]()
+
+![画像](https://github.com/Terfno/OculusUtilitiesForMac/blob/master/image/スクリーンショット%202018-07-14%2018.29.44.png)
+
 エラーを解消したときの設定状態多分これ私くらいしかしてないミスなんじゃないですかね…
 
 同じとこでハマってる人がいれば助けになるかと思います。
