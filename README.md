@@ -1,4 +1,6 @@
 # OculusUtilitiesForMac
+記事：https://medium.com/@sueda.takahito/macosでunity使ってoculusgoの開発を初めてやったときに情弱がハマったとこ-deeeb396cdf6
+
 Terfnoが頑張ったOculusUtilitiesを公開するだけのリポジトリ
 ## Unity project
 Afterのフォルダはエラー解消後です。
